@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{C5105E13-4DE8-4DF8-B08C-54056D49C945}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{14D774B0-FA74-4B8B-8B75-57BEF1B6002F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D049D35F-6B35-48CF-B88E-4ECD7922FDAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{351C71CC-F882-41EF-A190-3D7EE8C98851}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{82FB3335-3252-4681-8665-30D2F0CBCACC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{88C3D4CA-53F5-40D5-A263-58B7D6748125}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{351C71CC-F882-41EF-A190-3D7EE8C98851} = {D049D35F-6B35-48CF-B88E-4ECD7922FDAB}
+		{82FB3335-3252-4681-8665-30D2F0CBCACC} = {D049D35F-6B35-48CF-B88E-4ECD7922FDAB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B15B056-8451-4B8D-A09C-66CA945CA8F3}
+	EndGlobalSection
+EndGlobal
