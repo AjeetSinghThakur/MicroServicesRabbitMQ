@@ -7,7 +7,7 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 
-namespace Microservice.Bus
+namespace Microservice.Infrastructure.Bus
 {
     public sealed class RabbitMQBus : IEventBus
     {
@@ -99,6 +99,7 @@ namespace Microservice.Bus
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
             }
         }
 
