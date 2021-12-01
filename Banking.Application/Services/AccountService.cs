@@ -11,9 +11,9 @@ namespace Banking.Application.Services
         {
             _accountRepository = accountRepository;
         }
-        public IEnumerable<Account> GetAccounts()
+        public async Task<IEnumerable<Account>> GetAccounts()
         {
-            return _accountRepository.GetAccounts();
+            return await _accountRepository.GetAccounts();
         }
     }
 }

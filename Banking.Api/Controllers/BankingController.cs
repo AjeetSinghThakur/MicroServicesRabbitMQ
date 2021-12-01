@@ -8,19 +8,25 @@ namespace Banking.Api.Controllers
     [Route("[controller]")]
     public class BankingController : ControllerBase
     {
-        private readonly ILogger<BankingController> _logger;
         private readonly IAccountService _accountService;
 
-        public BankingController(ILogger<BankingController> logger, IAccountService accountService)
+        public BankingController(IAccountService accountService)
         {
-            _logger = logger;
             _accountService = accountService;
         }
 
         [HttpGet(Name = "GetAccounts")]
-        public ActionResult<IEnumerable<Account>> Get()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<IEnumerable<Account>>> Get()
         {
-            return Ok(_accountService.GetAccounts());
+            var accounts = await _accountService.GetAccounts();
+            if(accounts == null)
+            {
+                return NotFound();
+            }
+            return Ok(accounts);
         }
     }
 }

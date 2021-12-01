@@ -1,6 +1,7 @@
 ﻿using Banking.Data.Context;
 using Banking.Domain.Interfaces;
 using Banking.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Banking.Data.Repository
 {
@@ -11,9 +12,9 @@ namespace Banking.Data.Repository
         {
             _bankingDbContext = bankingDbContext;
         }
-        public IEnumerable<Account> GetAccounts()
+        public async Task<IEnumerable<Account>> GetAccounts()
         {
-            return _bankingDbContext.Accounts;
+            return await _bankingDbContext.Accounts.ToListAsync();
         }
     }
 }
