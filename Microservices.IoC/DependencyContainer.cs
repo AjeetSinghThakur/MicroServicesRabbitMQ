@@ -15,7 +15,7 @@ namespace Microservices.IoC
 {
     public class DependencyContainer
     {
-        public static void RegisterServices(IServiceCollection services,IConfiguration configuration )
+        public static void RegisterDependencies(IServiceCollection services,IConfiguration configuration )
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddTransient<IEventBus, RabbitMQBus>();
