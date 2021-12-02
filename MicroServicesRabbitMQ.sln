@@ -53,9 +53,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer.Api", "Transfer.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer.Application", "Transfer.Application\Transfer.Application.csproj", "{D8C2A3EB-E378-47BF-A98A-9E10BF765EC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Data", "Application.Data\Application.Data.csproj", "{8ADC1C3B-4233-4B37-BAC6-F2877EC33357}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer.Data", "Application.Data\Transfer.Data.csproj", "{8ADC1C3B-4233-4B37-BAC6-F2877EC33357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Domain", "Application.Domain\Application.Domain.csproj", "{6DDF89A3-52CD-4D46-8272-DB27D8DBFC22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer.Domain", "Application.Domain\Transfer.Domain.csproj", "{6DDF89A3-52CD-4D46-8272-DB27D8DBFC22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
