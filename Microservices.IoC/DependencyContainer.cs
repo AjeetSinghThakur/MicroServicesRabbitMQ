@@ -2,6 +2,8 @@
 using Banking.Application.Services;
 using Banking.Data.Context;
 using Banking.Data.Repository;
+using Banking.Domain.CommandHandlers;
+using Banking.Domain.Commands;
 using Banking.Domain.Interfaces;
 using MediatR;
 using Microservice.Infrastructure.Bus;
@@ -21,6 +23,7 @@ namespace Microservices.IoC
             services.AddTransient<IEventBus, RabbitMQBus>();
             services.AddTransient<IAccountService, AccountService>();
             services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
             services.AddDbContext<BankingDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("BankingDBConnectionString")));
         }

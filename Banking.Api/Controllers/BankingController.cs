@@ -1,4 +1,5 @@
 using Banking.Application.Interfaces;
+using Banking.Application.Models;
 using Banking.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +28,16 @@ namespace Banking.Api.Controllers
                 return NotFound();
             }
             return Ok(accounts);
+        }
+        [HttpPost("accountTransfer")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+
+        public async Task<ActionResult<AccountTransfer>> Post([FromBody] AccountTransfer accountTransfer)
+        {
+            await _accountService.Transfer(accountTransfer);
+            return Ok(accountTransfer);
         }
     }
 }
