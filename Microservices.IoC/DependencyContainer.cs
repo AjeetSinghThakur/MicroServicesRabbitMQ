@@ -17,15 +17,10 @@ namespace Microservices.IoC
 {
     public class DependencyContainer
     {
-        public static void RegisterDependencies(IServiceCollection services,IConfiguration configuration )
+        public static void AddApplicationServices(IServiceCollection services)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddTransient<IEventBus, RabbitMQBus>();
-            services.AddTransient<IAccountService, AccountService>();
-            services.AddTransient<IAccountRepository, AccountRepository>();
-            services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
-            services.AddDbContext<BankingDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("BankingDBConnectionString")));
         }
     }
 }
