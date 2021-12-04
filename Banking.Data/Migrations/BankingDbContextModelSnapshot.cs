@@ -38,7 +38,7 @@ namespace Banking.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("Account");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,7 +9,7 @@ namespace Transfer.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "TransferLogs",
+                name: "TransferLog",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -20,14 +20,14 @@ namespace Transfer.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TransferLogs", x => x.Id);
+                    table.PrimaryKey("PK_TransferLog", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TransferLogs");
+                name: "TransferLog");
         }
     }
 }

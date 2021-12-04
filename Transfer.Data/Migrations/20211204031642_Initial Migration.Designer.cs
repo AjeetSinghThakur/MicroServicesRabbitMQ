@@ -11,8 +11,8 @@ using Transfer.Data.Context;
 namespace Transfer.Data.Migrations
 {
     [DbContext(typeof(TransferDbContext))]
-    [Migration("20211204024459_Rename TransferLog table")]
-    partial class RenameTransferLogtable
+    [Migration("20211204031642_Initial Migration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

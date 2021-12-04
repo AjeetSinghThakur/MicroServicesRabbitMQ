@@ -9,7 +9,12 @@ namespace Transfer.Data.Context
         public TransferDbContext(DbContextOptions options): base(options)
         {
         }
-        public DbSet<TransferLog> TransferLog { get; set; }
+        public DbSet<TransferLog> TransferLogs { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.RemovePluralizingTableNameConvention();
+        }
     }
 }
  

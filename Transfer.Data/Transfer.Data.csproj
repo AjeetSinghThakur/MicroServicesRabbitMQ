@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application.Domain\Transfer.Domain.csproj" />
     <ProjectReference Include="..\Transfer.Domain\Transfer.Domain.csproj" />
   </ItemGroup>
 

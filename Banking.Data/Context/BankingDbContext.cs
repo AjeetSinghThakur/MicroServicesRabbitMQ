@@ -10,5 +10,10 @@ namespace Banking.Data.Context
         {
         }
         public DbSet<Account> Accounts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.RemovePluralizingTableNameConvention();
+        }
     }
 }
