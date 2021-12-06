@@ -9,6 +9,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Transfer.Application.Interfaces;
 using Transfer.Data.Context;
 
 namespace Microservices.IoC
@@ -28,6 +29,8 @@ namespace Microservices.IoC
         //Transfer microservice IoC
         public static void AddTransferPersistenceServices(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddTransient<ITransferService, TransferService>();
+            services.AddTransient<ITransferRepository, TransferRepository>();
             services.AddDbContext<TransferDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("TransferDBConnectionString")));
         }

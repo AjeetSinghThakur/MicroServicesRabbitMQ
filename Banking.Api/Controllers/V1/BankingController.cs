@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Banking.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     public class BankingController : ControllerBase
     {
         private readonly IAccountService _accountService;

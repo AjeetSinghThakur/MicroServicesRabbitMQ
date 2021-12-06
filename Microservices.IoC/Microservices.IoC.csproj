@@ -13,11 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application.Data\Transfer.Data.csproj" />
     <ProjectReference Include="..\Banking.Application\Banking.Application.csproj" />
     <ProjectReference Include="..\Banking.Data\Banking.Data.csproj" />
     <ProjectReference Include="..\Microservice.Bus\Microservice.Bus.csproj" />
     <ProjectReference Include="..\MicroServicesRabbitMQ.Domain\MicroServicesRabbitMQ.Domain.csproj" />
+    <ProjectReference Include="..\Transfer.Application\Transfer.Application.csproj" />
     <ProjectReference Include="..\Transfer.Data\Transfer.Data.csproj" />
   </ItemGroup>
 
